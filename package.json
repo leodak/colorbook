@@ -3,6 +3,7 @@
     "name": "startbootstrap-freelancer",
     "version": "7.0.7",
     "scripts": {
+        "predeploy": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
@@ -10,7 +11,8 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "deploy": "gh-pages -b master -d build"
     },
     "description": "A freelancer portfolio HTML theme for Bootstrap.",
     "keywords": [
@@ -23,7 +25,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/freelancer",
+    "homepage": "https://leodak.github.io/colorbook",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues",
         "email": "feedback@startbootstrap.com"
